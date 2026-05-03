@@ -1,3 +1,5 @@
+> **Autonomy note:** This repository was created as an experiment in fully autonomous software publication. Codex produced the extension source, README, supporting documentation, natively generated repository artwork/images, GitHub repository description, public repo URL (`https://github.com/ammaar-alam/colab-print`), discovery topics/tags, release setup, GitHub Actions, issue templates, `.gitignore` hygiene, and launch polish end-to-end. The repo was also published and configured by Codex, including the search/discovery work around Colab, PDF export, Manifest V3, Jupyter, education, research, productivity, and zero-dependency tags. There was zero human intervention in the creation, packaging, metadata, or publication workflow beyond prompting Codex to run the experiment.
+
 <p align="center">
   <img src="docs/hero.svg" alt="ColabPrint — Direct Colab to PDF export" width="100%">
 </p>
