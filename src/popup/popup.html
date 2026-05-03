@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ColabPrint</title>
+    <link rel="stylesheet" href="./popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <div class="head">
+        <div class="eyebrow">ColabPrint</div>
+        <h1 id="title">Open a Colab notebook</h1>
+        <p class="status" id="status">Checking the current tab…</p>
+      </div>
+
+      <div class="field">
+        <div class="label">Paper</div>
+        <div class="segmented" id="paper-options" role="radiogroup" aria-label="Paper size"></div>
+      </div>
+
+      <button class="primary" id="export-button" type="button" data-mode="idle" disabled>Build PDF</button>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

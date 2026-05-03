@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement or a new capability.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. ColabPrint is deliberately small — please check `docs/roadmap.md` and open issues before filing, and aim to describe a concrete problem rather than a specific implementation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      placeholder: "When exporting long notebooks, I want to skip cells that are collapsed so the PDF is shorter."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach (optional)
+      description: If you have a specific implementation in mind, describe it here. Otherwise leave blank — sometimes the best solution is different from the first idea.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered (optional)
+      description: What you already tried or ruled out.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints check
+      description: This project has hard constraints. Please confirm.
+      options:
+        - label: The proposal does not require adding a runtime dependency.
+        - label: The proposal does not require broader Chrome permissions than `activeTab` + `scripting` — or, if it does, the request notes why the added permission is worth it.

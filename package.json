@@ -1,0 +1,47 @@
+{
+  "name": "colab-print",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Direct, pixel-faithful PDF export for Google Colab notebooks. A Manifest V3 Chromium extension with zero runtime dependencies.",
+  "homepage": "https://github.com/ammaar-alam/colab-print",
+  "bugs": {
+    "url": "https://github.com/ammaar-alam/colab-print/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ammaar-alam/colab-print.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "browser-extension",
+    "chromium-extension",
+    "manifest-v3",
+    "google-colab",
+    "colab",
+    "colab-notebook",
+    "colab-pdf",
+    "colab-print",
+    "colab-export",
+    "jupyter",
+    "notebook",
+    "pdf",
+    "pdf-export",
+    "pdf-generator",
+    "print-to-pdf",
+    "export",
+    "education",
+    "research",
+    "productivity",
+    "javascript",
+    "zero-dependencies"
+  ],
+  "author": "Ammaar Alam",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node --check src/background/service-worker.js && node --check src/content/main.js && node --check src/popup/popup.js && node --check src/export/export.js && node --check src/shared/capture-plan.js && node --check src/shared/filename.js && node --check src/shared/job-store.js && node --check src/shared/paper.js && node --check src/shared/pdf-writer.js && node --check src/shared/provider.js"
+  }
+}

@@ -1,0 +1,65 @@
+name: Bug report
+description: Something isn't working as expected.
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in as much as you can — this project is small and the more context you give, the faster it gets fixed.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: "When I click Build PDF on a long notebook, the last page is blank."
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: A minimal reproduction if possible. A link to a shareable Colab notebook helps a lot.
+      placeholder: |
+        1. Open notebook X
+        2. Click Build PDF with A4
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "The last page should contain the final cell output."
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Arc 1.xx / Chrome 136 / Brave 1.xx"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "macOS 15.1 / Windows 11 / Ubuntu 24.04"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ColabPrint version
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Service worker / console logs
+      description: "chrome://extensions → ColabPrint → Details → Service worker → Inspect"
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drop screenshots of the broken PDF and the notebook as rendered in the tab.

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ColabPrint</title>
+    <link rel="stylesheet" href="./export.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <rect x="2.5" y="1.5" width="11" height="13" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M5 5h6M5 8h6M5 11h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__name">ColabPrint</span>
+        </div>
+        <h1 id="title">Building your PDF</h1>
+        <p class="subtle" id="status">Preparing captured notebook content.</p>
+      </header>
+
+      <section class="panel panel--primary">
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+
+        <dl class="stats">
+          <div class="stats__item">
+            <dt>Paper</dt>
+            <dd id="paper-label">—</dd>
+          </div>
+          <div class="stats__item">
+            <dt>Pages</dt>
+            <dd id="page-count">—</dd>
+          </div>
+          <div class="stats__item">
+            <dt>File size</dt>
+            <dd id="file-size">—</dd>
+          </div>
+        </dl>
+
+        <div class="actions">
+          <button id="download-button" class="button button--primary" disabled>
+            <span class="button__label">Download PDF</span>
+          </button>
+          <button id="preview-button" class="button" disabled>Show preview</button>
+          <button id="source-button" class="button button--ghost" hidden>Open notebook</button>
+        </div>
+      </section>
+
+      <section class="panel preview" id="preview-panel" hidden>
+        <div class="preview__header">
+          <div>
+            <div class="eyebrow eyebrow--muted">Preview</div>
+            <p class="preview__meta" id="preview-meta">PDF preview ready.</p>
+          </div>
+          <button id="hide-preview-button" class="button button--ghost">Hide preview</button>
+        </div>
+        <iframe id="preview-frame" class="preview__frame" title="PDF preview"></iframe>
+      </section>
+
+      <footer class="footer">
+        <span class="footer__mark">ColabPrint</span>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a class="footer__link" href="https://github.com/ammaar-alam/colab-print" target="_blank" rel="noopener">GitHub</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a class="footer__link" href="https://github.com/ammaar-alam/colab-print/issues" target="_blank" rel="noopener">Report issue</a>
+      </footer>
+    </main>
+
+    <script type="module" src="./export.js"></script>
+  </body>
+</html>
